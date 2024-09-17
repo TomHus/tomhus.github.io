@@ -70,3 +70,7 @@ hydejack:
     dynamic: true
     icon:    true
     always:  false
+
+menu:
+  - title: Blog
+    url: /blog/
