@@ -24,13 +24,12 @@ description: >- # this means to ignore newlines until "baseurl:"
   Audio Engineer & Guitarist
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://tomhuston.co.uk" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: 
-github_username:  TomHus
+github_username: TomHus
 
 # Build settings
-theme: minima
+theme: jekyll-theme-hydejack
 plugins:
-  - jekyll-feed
+  - jekyll-paginate
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -51,3 +50,23 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+accent_image: /assets/img/tom.jpg
+accent_color: rgb(191,87,13)
+theme_color: rgb(191,87,13)
+
+paginate: 10
+paginate_path: '/blog/:num/'
+
+author:
+  name:  Thomas Huston
+  email: tomhustonmusic@gmail.com
+  social:
+    instagram: tomhustonmusic
+    github:  TomHus
+
+hydejack:
+  dark_mode:
+    dynamic: true
+    icon:    true
+    always:  false
