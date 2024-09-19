@@ -1,9 +1,9 @@
 # config.yml
 
 backend:
-  name: github
-  branch: main
-  repo: TomHus/tomhus.github.io
+  name: git-gateway
+  # branch: main
+  # repo: TomHus/tomhus.github.io
 media_folder: 'assets/img/posts'
 site_url: https://tomhuston.co.uk
 logo_url: https://tomhuston.co.uk/assets/img/logo.png
