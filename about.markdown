@@ -1,7 +1,6 @@
 ---
 layout: page
-title: About
-permalink: /about/
+title: Inspirations
+permalink: /inspo/
 ---
-
-Example text
+HI
