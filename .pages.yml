@@ -55,6 +55,9 @@ content:
             fields:
               - { name: instagram, label: Instagram, type: string }
               - { name: github, label: Github, type: string }
+              - { name: email, label: Email, type: string }
+              - { name: soundcloud, label: Soundcloud, type: string }
+              - { name: linkedin, label: LinkedIn, type: string }
       - name: menu
         label: Menu
         type: object
