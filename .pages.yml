@@ -17,7 +17,7 @@ content:
   - name: pages
     label: Pages
     type: collection
-    path: 
+    path: ./
     view:
       fields: [ title ]
     fields:
