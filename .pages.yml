@@ -18,3 +18,5 @@ content:
     label: Jekyll Config
     type: file
     path: _config.yml
+    fields:
+      - { name: accent_image, label: Sidebar image, type: image }
