@@ -78,7 +78,7 @@ content:
       - { name: font, label: Font, type: string, required: true, default: Noto Sans, Helvetica, Arial, sans-serif }
       - { name: font_heading, label: Font Heading, type: string, required: true, default: Roboto Slab, Helvetica, Arial, sans-serif }
       - { name: url, label: URL, type: string, required: true, default: https://tomhuston.co.uk, hidden: true }
-      - { name: baseurl, label: Base URL, type: string, required: true, default: "''" }
+      - { name: baseurl, label: Base URL, type: string, required: true, default: "''", hidden: true }
       - { name: lang, label: Language Code, type: string, required: true, default: en, hidden: true }
       - { name: copyright, label: Copyright Text, type: string }
       - { name: permalink, label: Permalink, type: string, required: true, default: /:categories/:year-:month-:day-:title/ }
