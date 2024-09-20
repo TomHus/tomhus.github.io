@@ -5,7 +5,7 @@ content:
     type: collection
     path: _posts
     view:
-      fields: [ image, title ]
+      fields: [ image, title, description, categories ]
     fields:
       - { name: layout, type: string, hidden: true, default: post }
       - { name: image, label: Cover image, type: image }
@@ -18,7 +18,7 @@ content:
     label: Pages
     type: collection
     path: ""
-    icon: "book-open-text"
+    icon: layers-2
     filename: "{primary}.md"
     view:
       fields: [ title ]
@@ -42,21 +42,6 @@ content:
     type: file
     path: _config.yml
     fields:
-      - name: menu
-        label: Menu
-        type: object
-        list: true
-        fields:
-          - { name: title, label: Title, type: string }
-          - { name: url, label: URL, type: string }
-      - { name: url, label: URL, type: string, required: true, default: https://tomhuston.co.uk, hidden: true }
-      - { name: baseurl, label: Base URL, type: string, required: true, default: "", hidden: true }
-      - { name: lang, label: Language Code, type: string, required: true, default: en, hidden: true }
-      - { name: title, label: Title, type: string, required: true, default: Tom Huston }
-      - { name: description, label: Description, type: string, default: Audio engineer and guitarist based in England }
-      - { name: tagline, label: Tagline, type: string, default: Audio engineer and guitarist }
-      - { name: keywords, label: Keywords, type: string, list: true }
-      - { name: logo, label: Logo, type: image }
       - name: author
         label: Author
         type: object
@@ -69,15 +54,30 @@ content:
             fields:
               - { name: instagram, label: Instagram, type: string }
               - { name: github, label: Github, type: string }
-      - { name: copyright, label: Copyright Text, type: string }
-      - { name: permalink, label: Permalink, type: string, required: true, default: /:categories/:year-:month-:day-:title/ }
-      - { name: paginate, label: Paginate Number, type: number, default: 5, required: true, options: { min: 1, max: 20, step: 1 } }
-      - { name: paginate_path, label: Paginate Path, type: string, default: /blog/:num/, required: true, hidden: true }
+      - name: menu
+        label: Menu
+        type: object
+        list: true
+        fields:
+          - { name: title, label: Title, type: string }
+          - { name: url, label: URL, type: string }
+      - { name: title, label: Title, type: string, required: true, default: Tom Huston }
+      - { name: description, label: Description, type: string, default: Audio engineer and guitarist based in England }
+      - { name: tagline, label: Tagline, type: string, default: Audio engineer and guitarist }
+      - { name: keywords, label: Keywords, type: string, list: true }
+      - { name: logo, label: Logo, type: image }
       - { name: accent_image, label: Sidebar image, type: image }
       - { name: accent_color, label: Accent Colour, type: string }
       - { name: google_fonts, label: Google Fonts, type: string, required: true, hidden: true }
       - { name: font, label: Font, type: string, required: true, default: Noto Sans, Helvetica, Arial, sans-serif }
       - { name: font_heading, label: Font Heading, type: string, required: true, default: Roboto Slab, Helvetica, Arial, sans-serif }
+      - { name: url, label: URL, type: string, required: true, default: https://tomhuston.co.uk, hidden: true }
+      - { name: baseurl, label: Base URL, type: string, required: true, default: "", hidden: true }
+      - { name: lang, label: Language Code, type: string, required: true, default: en, hidden: true }
+      - { name: copyright, label: Copyright Text, type: string }
+      - { name: permalink, label: Permalink, type: string, required: true, default: /:categories/:year-:month-:day-:title/ }
+      - { name: paginate, label: Paginate Number, type: number, default: 5, required: true, options: { min: 1, max: 20, step: 1 } }
+      - { name: paginate_path, label: Paginate Path, type: string, default: /blog/:num/, required: true, hidden: true }
       - name: hydejack
         label: Hydejack Settings
         type: object
