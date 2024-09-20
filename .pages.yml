@@ -78,7 +78,7 @@ content:
       - { name: font, label: Font, type: string, required: true, default: Noto Sans, Helvetica, Arial, sans-serif }
       - { name: font_heading, label: Font Heading, type: string, required: true, default: Roboto Slab, Helvetica, Arial, sans-serif }
       - { name: url, label: URL, type: string, required: true, default: https://tomhuston.co.uk, hidden: true }
-      - { name: baseurl, label: Base URL, type: string, required: true, default: "''", hidden: true }
+      - { name: baseurl, label: Base URL, type: string, required: true, default: "", hidden: true }
       - { name: lang, label: Language Code, type: string, required: true, default: en, hidden: true }
       - { name: copyright, label: Copyright Text, type: string }
       - { name: permalink, label: Permalink, type: string, required: true, default: /:categories/:year-:month-:day-:title/ }
@@ -97,7 +97,6 @@ content:
               - { name: always, label: Always, type: boolean, default: false, required: true }
       - name: exclude
         label: Exclude
-        hidden: true
         required: true
         type: string
         list: true
@@ -107,7 +106,6 @@ content:
           - Gemfile.lock
       - name: plugins
         label: Plugins
-        hidden: true
         required: true
         type: string
         list: true
@@ -147,54 +145,37 @@ content:
           - { name: collections, label: Collections, type: boolean, default: true, required: true }
       - name: titles_from_headings
         label: Titles From Headings
-        hidden: true
         required: true
         type: object
-        default:
-          strip_title: true
-          collections: true
         fields:
-          - { name: strip_title, label: Strip title, type: boolean, default: true }
-          - { name: collections, label: Collections, type: boolean, default: true }
+          - { name: strip_title, label: Strip title, type: boolean, default: true, required: true }
+          - { name: collections, label: Collections, type: boolean, default: true, required: true }
       - name: kramdown
         label: Kramdown
-        hidden: true
         required: true
         type: object
-        default:
-          footnote_backlink: "'&#x21a9;&#xfe0e;'"
-          math_engine: mathjax
-          math_engine_opts:
-            preview: true
-            preview_as_code: true
         fields:
-          - { name: footnote_backlink, label: Footnote Backlink, type: string, default: "'&#x21a9;&#xfe0e;'" }
-          - { name: math_engine, label: Math Engine, type: string, default: mathjax }
+          - { name: footnote_backlink, label: Footnote Backlink, type: string, default: "'&#x21a9;&#xfe0e;'", required: true }
+          - { name: math_engine, label: Math Engine, type: string, default: mathjax, required: true}
           - name: math_engine_opts
             label: Math Engine Options
             type: object
+            required: true
             fields:
-              - { name: preview, label: Preview, type: boolean, default: true }
-              - { name: preview_as_code, label: Preview As Code, type: boolean, default: true }
+              - { name: preview, label: Preview, type: boolean, default: true, required: true }
+              - { name: preview_as_code, label: Preview As Code, type: boolean, default: true, required: true }
       - name: compress_html
         label: Compress HTML
-        hidden: true
         required: true
         type: object
-        default:
-          comments: ['<!-- ', ' -->']
-          clippings: all
-          endings: all
         fields:
-          - { name: comments, label: Comments, type: string, default: "['<!-- ', ' -->']" }
-          - { name: clippings, label: Clippings, type: string, default: all }
-          - { name: endings, label: Endings, type: string, default: all }
+          - { name: comments, label: Comments, type: string, default: "['<!-- ', ' -->']", required: true }
+          - { name: clippings, label: Clippings, type: string, default: all, required: true }
+          - { name: endings, label: Endings, type: string, default: all, required: true }
       - name: sass
         label: Sass
-        hidden: true
+        hidden: false
         required: true
         type: object
-        default:
-          style: "compressed"
         fields:
-          - { name: style, label: Style, type: string, default: "compressed", required: true }
+          - { name: style, label: Style, type: string, default: compressed, required: true }
