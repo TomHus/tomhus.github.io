@@ -2,8 +2,7 @@
 layout: home
 title: Home
 cover: true
-image:
-  path: /assets/img/tom.jpg
+image: /assets/img/posts/tom.jpg
 ---
 
 Hello, this is a description of me...
