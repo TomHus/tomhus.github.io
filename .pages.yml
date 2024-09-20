@@ -18,7 +18,7 @@ content:
     label: Pages
     type: collection
     path: ""
-    icon: book-open-text
+    icon: "book-open-text"
     filename: "{primary}.md"
     view:
       fields: [ title ]
