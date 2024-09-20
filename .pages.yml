@@ -120,6 +120,8 @@ content:
         hidden: true
         required: true
         type: object
+        default:
+          remove_originals: true
         fields:
           - { name: remove_originals, label: Remove Originals, type: boolean, default: true, required: true }
       - name: readme_index
@@ -127,6 +129,8 @@ content:
         hidden: true
         required: true
         type: object
+        default:
+          remove_originals: true
         fields:
           - { name: remove_originals, label: Remove Originals, type: boolean, default: true, required: true }
       - name: relative_links
@@ -134,6 +138,8 @@ content:
         hidden: true
         required: true
         type: object
+        default:
+          collections: true
         fields:
           - { name: collections, label: Collections, type: boolean, default: true, required: true }
       - name: titles_from_headings
