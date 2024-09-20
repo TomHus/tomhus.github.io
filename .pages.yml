@@ -1,0 +1,15 @@
+media: media
+content:
+  - name: posts
+    label: Posts
+    type: collection
+    path: _posts
+    view:
+      fields: [ image, title ]
+    fields:
+      - { name: layout, type: string, hidden: true, default: post }
+      - { name: image, label: Cover image, type: image }
+      - { name: title, label: Title, type: string, required: true }
+      - { name: description, label: Description, type: string }
+      - { name: categories, label: Categories, type: select, options: { values: [ "blog" ] } }
+      - { name: body, label: Body, type: rich-text }
