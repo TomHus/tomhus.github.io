@@ -137,33 +137,45 @@ content:
         hidden: true
         required: true
         type: object
+        default:
+          strip_title: true
+          collections: true
         fields:
-          - { name: strip_title, label: Strip title, type: boolean, default: true, required: true }
-          - { name: collections, label: Collections, type: boolean, default: true, required: true }
+          - { name: strip_title, label: Strip title, type: boolean, default: true }
+          - { name: collections, label: Collections, type: boolean, default: true }
       - name: kramdown
         label: Kramdown
         hidden: true
         required: true
         type: object
+        default:
+          footnote_backlink: "'&#x21a9;&#xfe0e;'"
+          math_engine: mathjax
+          math_engine_opts:
+            preview: true
+            preview_as_code: true
         fields:
-          - { name: footnote_backlink, label: Footnote Backlink, type: string, default: "'&#x21a9;&#xfe0e;'", required: true }
-          - { name: math_engine, label: Math Engine, type: string, default: mathjax, required: true }
+          - { name: footnote_backlink, label: Footnote Backlink, type: string, default: "'&#x21a9;&#xfe0e;'" }
+          - { name: math_engine, label: Math Engine, type: string, default: mathjax }
           - name: math_engine_opts
             label: Math Engine Options
-            required: true
             type: object
             fields:
-              - { name: preview, label: Preview, type: boolean, default: true, required: true }
-              - { name: preview_as_code, label: Preview As Code, type: boolean, default: true, required: true }
+              - { name: preview, label: Preview, type: boolean, default: true }
+              - { name: preview_as_code, label: Preview As Code, type: boolean, default: true }
       - name: compress_html
         label: Compress HTML
         hidden: true
         required: true
         type: object
+        default:
+          comments: ['<!-- ', ' -->']
+          clippings: all
+          endings: all
         fields:
-          - { name: comments, label: Comments, type: string, default: "['<!-- ', ' -->']", required: true }
-          - { name: clippings, label: Clippings, type: string, default: all, required: true }
-          - { name: endings, label: Endings, type: string, default: all, required: true }
+          - { name: comments, label: Comments, type: string, default: "['<!-- ', ' -->']" }
+          - { name: clippings, label: Clippings, type: string, default: all }
+          - { name: endings, label: Endings, type: string, default: all }
       - name: sass
         label: Sass
         hidden: true
