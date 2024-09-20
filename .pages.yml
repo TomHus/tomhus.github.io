@@ -195,6 +195,6 @@ content:
         required: true
         type: object
         default:
-          style: compressed
+          style: "compressed"
         fields:
-          - { name: style, label: Style, type: string, default: compressed }
+          - { name: style, label: Style, type: string, default: compressed, required: true }
