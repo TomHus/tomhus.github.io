@@ -27,14 +27,15 @@ content:
       - { name: title, label: Title, type: string, required: true }
       - { name: permalink, label: Permalink, type: string, required: true }
       - { name: body, label: Body, type: rich-text }
-  - name: about
-    label: About
+  - name: home
+    label: Home
     type: file
-    path: about.markdown
+    path: index.markdown
     fields:
-      - { name: layout, type: string, hidden: true, default: page }
-      - { name: title, label: Title, type: string, required: true }
-      - { name: permalink, label: Permalink, type: string, required: true }
+      - { name: layout, type: string, hidden: true, default: home }
+      - { name: title, label: Title, type: string, required: true, default: Home }
+      - { name: cover, label: Cover, type: boolean, required: true }
+      - { name: image, label: Cover image, type: image }
       - { name: body, label: Body, type: rich-text }
   # - name: config
   #   label: Jekyll Config
