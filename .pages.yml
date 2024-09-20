@@ -6,7 +6,6 @@ content:
     path: _posts
     view:
       fields: [ image, title, description, categories ]
-      icon: log-in
     fields:
       - { name: layout, type: string, hidden: true, default: post }
       - { name: image, label: Cover image, type: image }
