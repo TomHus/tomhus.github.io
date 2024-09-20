@@ -4,6 +4,7 @@ author:
   social:
     instagram: tomhustonmusic
     github: TomHus
+    email: tomhustonmusic@gmail.com
 menu:
   - title: Blog
     url: /blog/
@@ -39,6 +40,16 @@ hydejack:
     dynamic: true
     icon: true
     always: false
+exclude:
+  - vendor
+  - Gemfile
+  - Gemfile.lock
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-relative-links
+  - jekyll-seo-tag
+  - jekyll-sitemap
 theme: jekyll-theme-hydejack
 optional_front_matter:
   remove_originals: false
@@ -46,3 +57,18 @@ readme_index:
   remove_originals: false
 relative_links:
   collections: false
+titles_from_headings:
+  strip_title: true
+  collections: true
+kramdown:
+  footnote_backlink: "'&#x21a9;&#xfe0e;'"
+  math_engine: mathjax
+  math_engine_opts:
+    preview: true
+    preview_as_code: true
+compress_html:
+  comments: "['<!-- ', ' -->']"
+  clippings: all
+  endings: all
+sass:
+  style: compressed
