@@ -18,6 +18,7 @@ content:
     label: Pages
     type: collection
     path: ''
+    filename: '{primary}.md'
     view:
       fields: [ title ]
     fields:
