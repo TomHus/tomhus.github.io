@@ -14,3 +14,7 @@ content:
       - { name: categories, label: Categories, type: select, options: { values: [ "blog" ] } }
       - { name: tags, label: Tags, type: string, list: true}
       - { name: body, label: Body, type: rich-text }
+  - name: config
+    label: Jekyll Config
+    type: file
+    path: _config.yml
