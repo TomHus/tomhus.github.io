@@ -1,7 +1,7 @@
 ---
 layout: post
 image:
-  path:    /assets/img/posts/tom-greenwhich.jpg
+  path:    /assets/tom-greenwhich.jpg
 description: >
   This is a description of the post
 categories: [blog]
@@ -58,7 +58,7 @@ And faded text
 
 A [link](https://www.example.com)
 
-![An image](/assets/icons/icon.png)
+![An image](/assets/global/icon.png)
 
 A caption for an image.
 {:.figcaption}
