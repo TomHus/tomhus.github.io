@@ -37,8 +37,8 @@ hydejack:
     always: false
 theme: jekyll-theme-hydejack
 optional_front_matter:
-  remove_originals: false
+  remove_originals: true
 readme_index:
-  remove_originals: false
+  remove_originals: true
 relative_links:
-  collections: false
+  collections: true
