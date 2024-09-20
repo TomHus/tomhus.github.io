@@ -4,6 +4,7 @@ content:
     label: Posts
     type: collection
     path: _posts
+    icon: layout-list
     view:
       fields: [ image, title, description, categories ]
     fields:
@@ -17,7 +18,6 @@ content:
   - name: pages
     label: Pages
     type: collection
-    icon: layout-list
     path: ""
     subfolders: false
     filename: "{primary}.md"
