@@ -147,6 +147,9 @@ content:
         label: Titles From Headings
         required: true
         type: object
+        default:
+          strip_title: true
+          collections: true
         fields:
           - { name: strip_title, label: Strip title, type: boolean, default: true, required: true }
           - { name: collections, label: Collections, type: boolean, default: true, required: true }
