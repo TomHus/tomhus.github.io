@@ -57,7 +57,18 @@ content:
       - { name: tagline, label: Tagline, type: string, default: Audio engineer and guitarist }
       - { name: keywords, label: Keywords, type: string, list: true }
       - { name: logo, label: Logo, type: image }
-      # TODO: Author
+      - name: author
+        label: Author
+        type: object
+        fields:
+          - { name: name, label: Name, type: string, default: Thomas Huston, required: true }
+          - { name: email, label: Email, type: string, required: true }
+          - name: social
+            label: Social
+            type: object
+            fields:
+              - { name: instagram, label: Instagram, type: string }
+              - { name: github, label: Github, type: string }
       - { name: copyright, label: Copyright Text, type: string }
       - { name: permalink, label: Permalink, type: string, required: true, default: /:categories/:year-:month-:day-:title/ }
       - { name: paginate, label: Paginate Number, type: number, default: 5, required: true, options: { min: 1, max: 20, step: 1 } }
