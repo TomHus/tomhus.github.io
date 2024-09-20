@@ -17,8 +17,8 @@ content:
   - name: pages
     label: Pages
     type: collection
-    path: ''
-    filename: '{primary}.md'
+    path: ""
+    filename: "{primary}.md"
     view:
       fields: [ title ]
     fields:
