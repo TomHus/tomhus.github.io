@@ -68,7 +68,7 @@ content:
       - { name: logo, label: Logo, type: image }
       - { name: accent_image, label: Sidebar image, type: image }
       - { name: accent_color, label: Accent Colour, type: string }
-      - { name: google_fonts, label: Google Fonts, type: string, required: true, hidden: true }
+      - { name: google_fonts, label: Google Fonts, type: string, required: true, hidden: true, default: "Roboto+Slab:700|Noto+Sans:400,400i,700,700i" }
       - { name: font, label: Font, type: string, required: true, default: Noto Sans, Helvetica, Arial, sans-serif }
       - { name: font_heading, label: Font Heading, type: string, required: true, default: Roboto Slab, Helvetica, Arial, sans-serif }
       - { name: url, label: URL, type: string, required: true, default: https://tomhuston.co.uk, hidden: true }
