@@ -145,12 +145,6 @@ content:
         hidden: true
         required: true
         type: object
-        default:
-          footnote_backlink: '&#x21a9;&#xfe0e;'
-          math_engine: mathjax
-          math_engine_opts:
-            preview: true
-            preview_as_code: true
         fields:
           - { name: footnote_backlink, label: Footnote Backlink, type: string, default: "'&#x21a9;&#xfe0e;'", required: true }
           - { name: math_engine, label: Math Engine, type: string, default: mathjax, required: true }
@@ -174,6 +168,8 @@ content:
         label: Sass
         hidden: true
         required: true
+        default:
+          style: compressed
         type: object
         fields:
           - { name: style, label: Style, type: string, default: compressed, required: true }
