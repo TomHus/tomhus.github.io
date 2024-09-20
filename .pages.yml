@@ -168,9 +168,8 @@ content:
         label: Sass
         hidden: true
         required: true
-        default:
-          sass:
-            style: compressed
         type: object
+        default:
+          style: compressed
         fields:
-          - { name: style, label: Style, type: string, default: compressed, required: true }
+          - { name: style, label: Style, type: string, default: compressed }
