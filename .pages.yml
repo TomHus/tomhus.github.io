@@ -37,16 +37,127 @@ content:
       - { name: cover, label: Cover, type: boolean, required: true }
       - { name: image, label: Cover image, type: image }
       - { name: body, label: Body, type: rich-text }
-  # - name: config
-  #   label: Jekyll Config
-  #   type: file
-  #   path: _config.yml
-  #   fields:
-  #     - { name: accent_image, label: Sidebar image, type: image }
-  #     - name: menu
-  #       label: Menu
-  #       type: object
-  #       list: true
-  #       fields:
-  #         - { name: title, label: Title, type: string }
-  #         - { name: url, label: URL, type: string }
+  - name: config
+    label: Jekyll Config
+    type: file
+    path: _config.yml
+    fields:
+      - name: menu
+        label: Menu
+        type: object
+        list: true
+        fields:
+          - { name: title, label: Title, type: string }
+          - { name: url, label: URL, type: string }
+      - { name: url, label: URL, type: string, required: true, default: https://tomhuston.co.uk, hidden: true }
+      - { name: baseurl, label: Base URL, type: string, required: true, default: "", hidden: true }
+      - { name: lang, label: Language Code, type: string, required: true, default: en, hidden: true }
+      - { name: title, label: Title, type: string, required: true, default: Tom Huston }
+      - { name: description, label: Description, type: string, default: Audio engineer and guitarist based in England }
+      - { name: tagline, label: Tagline, type: string, default: Audio engineer and guitarist }
+      - { name: keywords, label: Keywords, type: string, list: true }
+      - { name: logo, label: Logo, type: image }
+      # TODO: Author
+      - { name: copyright, label: Copyright Text, type: string }
+      - { name: permalink, label: Permalink, type: string, required: true, default: /:categories/:year-:month-:day-:title/ }
+      - { name: paginate, label: Paginate Number, type: number, default: 5, required: true, options: { min: 1, max: 20, step: 1 } }
+      - { name: paginate_path, label: Paginate Path, type: string, default: /blog/:num/, required: true, hidden: true }
+      - { name: accent_image, label: Sidebar image, type: image }
+      - { name: accent_color, label: Accent Colour, type: string }
+      - { name: google_fonts, label: Google Fonts, type: string, required: true, hidden: true }
+      - { name: font, label: Font, type: string, required: true, default: Noto Sans, Helvetica, Arial, sans-serif }
+      - { name: font_heading, label: Font Heading, type: string, required: true, default: Roboto Slab, Helvetica, Arial, sans-serif }
+      - name: hydejack
+        label: Hydejack Settings
+        type: object
+        fields:
+          - name: dark_mode
+            label: Dark Mode
+            type: object
+            fields:
+              - { name: dynamic, label: Dynamic, type: boolean, default: true, required: true }
+              - { name: icon, label: Icon, type: boolean, default: true, required: true }
+              - { name: always, label: Always, type: boolean, default: false, required: true }
+      - name: exclude
+        label: Exclude
+        hidden: true
+        required: true
+        type: string
+        list: true
+        default:
+          - vendor
+          - Gemfile
+          - Gemfile.lock
+      - name: plugins
+        label: Plugins
+        hidden: true
+        required: true
+        type: string
+        list: true
+        default:
+          - jekyll-feed
+          - jekyll-paginate
+          - jekyll-relative-links
+          - jekyll-seo-tag
+          - jekyll-sitemap
+      - { name: theme, label: Theme, type: string, required: true, hidden: true, default: jekyll-theme-hydejack }
+      - name: optional_front_matter
+        label: Optional Front Matter
+        hidden: true
+        required: true
+        type: object
+        fields:
+          - { name: remove_originals, label: Remove Originals, type: boolean, default: true, required: true }
+      - name: readme_index
+        label: Readme Index
+        hidden: true
+        required: true
+        type: object
+        fields:
+          - { name: remove_originals, label: Remove Originals, type: boolean, default: true, required: true }
+      - name: relative_links
+        label: Relative Links
+        hidden: true
+        required: true
+        type: object
+        fields:
+          - { name: collections, label: Collections, type: boolean, default: true, required: true }
+      - name: titles_from_headings
+        label: Titles From Headings
+        hidden: true
+        required: true
+        type: object
+        fields:
+          - { name: strip_title, label: Strip title, type: boolean, default: true, required: true }
+          - { name: collections, label: Collections, type: boolean, default: true, required: true }
+      - name: kramdown
+        label: Kramdown
+        hidden: true
+        required: true
+        type: object
+        fields:
+          - { name: footnote_backlink, label: Footnote Backlink, type: string, default: "'&#x21a9;&#xfe0e;'", required: true }
+          - { name: math_engine, label: Math Engine, type: string, default: mathjax, required: true }
+          - name: math_engine_opts
+            label: Math Engine Options
+            required: true
+            type: object
+            fields:
+              - { name: preview, label: Preview, type: boolean, default: true, required: true }
+              - { name: preview_as_code, label: Preview As Code, type: boolean, default: true, required: true }
+      - name: compress_html
+        label: Compress HTML
+        hidden: true
+        required: true
+        type: object
+        fields:
+          - { name: comments, label: Comments, type: string, default: "['<!-- ', ' -->']", required: true }
+          - { name: clippings, label: Clippings, type: string, default: all, required: true }
+          - { name: endings, label: Endings, type: string, default: all, required: true }
+      - name: sass
+        label: Sass
+        hidden: true
+        required: true
+        type: object
+        fields:
+          - { name: style, label: Style, type: string, default: compressed, required: true }
